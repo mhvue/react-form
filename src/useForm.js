@@ -1,7 +1,7 @@
 import{useState,useEffect} from "react";
 
-const useForm = () => {
-    const [values,sectValues] = useState({
+const useForm = (validate) => {
+    const [values,setValues] = useState({
         username: "",
         email: "",
         password:"",
@@ -12,13 +12,20 @@ const useForm = () => {
 
     const handleChange = e => {
         const {name,value} = e.target
-        sectValues({
+        setValues({
             ...values,
             [name]: value
         })
     };
 
-    return {handleChange, values};
+    const handleSubmit = e => {
+        e.preventDefault();
+
+        //display errors info 
+        setErrors(validate(values));
+    }
+
+    return {handleChange, values, handleSubmit, errors};
 
 }
 
