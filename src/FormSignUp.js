@@ -16,6 +16,8 @@ const FormSignUp = () => {
                         name ="username"
                         className="form-input"
                         placeholder= "Enter your username"
+                        value = {values.username}
+                        onChange={hangleChange}
                     />
                 </div>
                 <div className= "form-inputs">
