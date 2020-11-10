@@ -75,12 +75,13 @@ const FormSignUp = ({submitForm}) => {
                     />
                     {errors.password2 && <p>{errors.password2}</p>}
                 </div>
+                <br></br>
                 <button className="form-input-btn"
                     type= "button-submit">Sign me up!
                 </button>
-                <span className="form-input-login">
+                <p className="form-input-login">
                     Already have an Account? Login <a href="#">here</a>
-                </span>
+                </p>
             </form>
         </div>
 
