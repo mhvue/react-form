@@ -11,9 +11,12 @@ const FormSignUp = ({submitForm}) => {
         <div className= ".form-content-right">
             <form className = "form" onSubmit={handleSubmit}>
                 <h1>Get started with us today!</h1>
+                <hr></hr>
+                <br></br>
                 <div className= "form-inputs">
                     <label htmlFor="username"
-                        className="form-label">
+                        className="form-label"
+                        id="usernameID">
                         Username
                     </label>
                     <input 
